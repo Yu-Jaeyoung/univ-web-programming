@@ -1,0 +1,23 @@
+h1 > span:nth-child(1) {
+    color: rgb(83, 131, 236)
+}
+
+h1 > span:nth-child(2) {
+    color: rgb(216, 81, 64)
+}
+
+h1 > span:nth-child(3) {
+    color: rgb(241, 191, 66)
+}
+
+h1 > span:nth-child(4) {
+    color: rgb(83, 131, 236)
+}
+
+h1 > span:nth-child(5) {
+    color: rgb(88, 166, 92)
+}
+
+h1 > span:nth-child(6) {
+    color: rgb(216, 81, 64)
+}
