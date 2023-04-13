@@ -1,0 +1,30 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>exercise 7</title>
+</head>
+<body>
+<script>
+  function alerting(a, b) {
+    if ((a + b) > 1000.35)
+      alert("Big");
+    else
+      alert("Small");
+  }
+</script>
+<script>
+  let firstInput = prompt("실수 1 입력", "");
+  console.log(firstInput);
+  let a = parseFloat(firstInput);
+  console.log(a);
+
+  let secondInput = prompt("실수 2 입력", "");
+  console.log(secondInput);
+  let b = parseFloat(secondInput);
+  console.log(b);
+
+  alerting(a, b);
+</script>
+</body>
+</html>
