@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>시간 정보를 입력하는 폼 활용</title>
+    <script>
+      function change() {
+        // alert("click!!!");
+        // documnet.getElementById를 통해서 disp, result값을 가져옴
+        // 시간을 가져오기위해 Id를 result2로 지정해 값을 가져옴
+        // 시험에 나올 예정
+        let p = document.getElementById("disp");
+        let q = document.getElementById("result2");
+        p.innerHTML = "결과 " + q.value;
+      }
+    </script>
+</head>
+
+<body>
+<h3>시간 정보 입력 HTML5 폼 요소들</h3>
+초기 세팅 : 2022년 3월 1일 밤 9시 30분(10초 32)<br>
+시간을 변경해 보세요
+<hr>
+<form>
+<pre>
+month :	<input type="month" id="result" value="2022-03"><br>
+week : 	<input type="week" value="2022-W09"><br>
+data : 	<input type="date" value="2022-03-01"><br>
+time : 	<input type="time" id="result2" value="21:30"><br>
+local:	<input type="datetime-local" value="2022-09-01T21:30:10.32"><br>
+</pre>
+</form>
+<div onclick="change()">결과보기</div>
+<div id="disp">여기에 결과 나옵니다</div>
+
+</body>
+</html>
