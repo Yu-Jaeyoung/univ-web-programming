@@ -1,0 +1,72 @@
+<!--실습문제 7-2-->
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>exercise2</title>
+</head>
+<body>
+<h3>정수 5개를 입력받아 역순으로 출력</h3>
+<hr>
+
+<script>
+  /** prompt로 입력 받은 뒤,
+   * 1. 역순
+   * 2. 오름차순
+   * 3. 내림차순
+   * 4. 평균보다 큰 수만
+   * 으로 정렬하여 출력
+   * */
+  let array = new Array();
+
+  for (let i = 0; i < 5; i++) {
+    let num = prompt("정수 입력");
+
+    num = parseInt(num);
+
+    array[i] = num;
+  }
+
+  document.write("입력된 수의 배열" + "<br>");
+
+  for (let i = 0; i < 5; i++) {
+    document.write(array[i] + " ");
+  }
+  array.sort(function (a, b) {
+    return (a - b);
+  });
+
+  document.write("<br>" + "오름차순으로 정렬된 배열" + "<br>");
+
+  for (let i = 0; i < 5; i++) {
+    document.write(array[i] + " ");
+  }
+
+
+  array.reverse();
+  // 혹은 array.sort(function (a, b) { return (b - a); });
+
+  document.write("<br>" + "내림차순으로 정렬된 배열" + "<br>");
+
+  for (let i = 0; i < 5; i++) {
+    document.write(array[i] + " ");
+  }
+
+  let sum = 0;
+
+  for (let i = 0; i < 5; i++) {
+    sum += array[i];
+  }
+
+  let avg = sum / array.length;
+
+  document.write("<br>" + "평균 " + avg + " 보다 큰 수 출력" + "<br>");
+
+  for (let i = 0; i < 5; i++) {
+    if (array[i] >= avg) {
+      document.write(array[i] + " ");
+    }
+  }
+</script>
+</body>
+</html>

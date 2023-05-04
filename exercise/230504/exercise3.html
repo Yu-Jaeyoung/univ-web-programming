@@ -1,0 +1,46 @@
+<!--실습문제 7-4-->
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>exercise3</title>
+</head>
+<body>
+<h3>일요일은 pink, 다른 요일은 gold 배경</h3>
+<hr>
+<script>
+  let current = new Date(); // 요일을 받음 일요일 = 0, 월요일 = 1, ...
+
+  switch (current.getDay()) {
+    case 0 :
+      document.write("오늘 : " + current.getDate() + "일, 일요일");
+      document.body.style.background = "pink";
+      break;
+    case 1 :
+      document.write("오늘 : " + current.getDate() + "일, 월요일");
+      document.body.style.background = "gold";
+      break;
+    case 2:
+      document.write("오늘 : " + current.getDate() + "일, 화요일");
+      document.body.style.background = "gold";
+      break;
+    case 3:
+      document.write("오늘 : " + current.getDate() + "일, 수요일");
+      document.body.style.background = "gold";
+      break;
+    case 4:
+      document.write("오늘 : " + current.getDate() + "일, 목요일");
+      document.body.style.background = "gold";
+      break;
+    case 5:
+      document.write("오늘 : " + current.getDate() + "일, 금요일");
+      document.body.style.background = "gold";
+      break;
+    case 6:
+      document.write("오늘 : " + current.getDate() + "일, 토요일");
+      document.body.style.background = "gold";
+      break;
+  }
+</script>
+</body>
+</html>

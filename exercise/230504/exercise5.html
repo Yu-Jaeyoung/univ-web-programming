@@ -1,0 +1,29 @@
+<!--Date 활용 문제-->
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>exercise5</title>
+</head>
+<body>
+<h3> 내일 어제 </h3>
+<hr>
+<script>
+  function addDays(date, days) {
+    const clone = new Date(date);
+    clone.setDate(date.getDate() + days);
+    return clone;
+  }
+
+  const today = new Date();
+  const someday = new Date(2023, 0, 31); // 23년 1월 31일
+
+  const yesterday = addDays(someday, -1);
+  const tomorrow = addDays(someday, 1);
+
+  document.write("어제 : " + yesterday + "<br>");
+  document.write("내일 : " + tomorrow + "<br>");
+
+</script>
+</body>
+</html>
