@@ -1,0 +1,24 @@
+<!--버튼 색상 변경-->
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>exercise 7</title>
+    <script>
+      function buttonColorChange(obj) {
+        if (obj.style.backgroundColor === "red") {
+          obj.style.backgroundColor = "blue";
+        } else if (obj.style.backgroundColor === "") {
+          obj.style.backgroundColor = "red";
+        } else {
+          obj.style.backgroundColor = "";
+        }
+      }
+    </script>
+</head>
+<body>
+<h3>버튼을 눌러서 버튼 색깔 바꾸기 / this 키워드 사용</h3>
+<hr>
+<button onclick="buttonColorChange(this)">버튼</button>
+</body>
+</html>
