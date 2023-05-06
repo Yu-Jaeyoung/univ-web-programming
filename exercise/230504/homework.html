@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>과제4</title>
+</head>
+<body>
+<h3>과제 4</h3>
+<hr>
+<script>
+  function change() {
+    let inputText = document.getElementById("inputText");
+    let changeSource = document.getElementById("changeSource");
+    let splitText = inputText.value.split("&");
+    for (let i = 0; i < splitText.length; i++) {
+      changeSource.innerHTML += splitText[i] + "<br>";
+    }
+  }
+</script>
+<input type="text" id="inputText">
+<button onclick="change()" type="button">버튼</button>
+<div id="changeSource"></div>
+</body>
+</html>
