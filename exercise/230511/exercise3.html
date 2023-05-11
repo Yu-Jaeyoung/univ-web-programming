@@ -1,0 +1,25 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>exercise3</title>
+    <script>
+
+      function question() {
+        let message = prompt();
+        changeDiv(message);
+      }
+
+      function changeDiv(message) {
+        let changeDiv = document.getElementById("changeDiv");
+        changeDiv.innerHTML = message;
+      }
+    </script>
+</head>
+<body>
+<h3>exercise3</h3>
+<hr>
+<div id="question" onclick="question()">이번 여름에는 어디로 갈까요?</div>
+<div id="changeDiv"></div>
+</body>
+</html>
