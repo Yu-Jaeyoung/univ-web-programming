@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>exercise 3</title>
+    <script>
+      function selectedMenu() {
+        let checkMenuList = "";
+        let menu = document.getElementsByName("china");
+        let printMenu = document.getElementById("checked_menu");
+        for (let i = 0; i < menu.length; i++) {
+          if (menu[i].checked === true) {
+            checkMenuList += (menu[i].value+ " ");
+          }
+        }
+            printMenu.innerText = checkMenuList;
+      }
+    </script>
+</head>
+<body>
+<input type="radio" name="china" value="짜장">짜장
+<input type="radio" name="china" value="짬뽕">짬뽕
+<br>
+<input type="checkbox" name="china" value="탕수육">탕수육
+<input type="checkbox" name="china" value="유산슬">유산슬
+<br><button onclick="selectedMenu()">메뉴 확인</button>
+<div id="checked_menu"></div>
+</body>
+</html>

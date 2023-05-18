@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>exercise 1</title>
+    <script>
+
+      let count = 0;
+      function iconRotate() {
+        count += 10;
+        let icon = document.getElementById("icon");
+        icon.style = "transform:rotate(" + count + "deg)";
+      }
+
+      function iconRotate2() {
+        count -= 30;
+        let icon = document.getElementById("icon");
+        icon.style = "transform:rotate(" + count + "deg)";
+      }
+    </script>
+    <style>
+        div#icon {
+            transform: rotate(10deg);
+        }
+    </style>
+</head>
+<body>
+<h2>Image Rotate</h2>
+<hr>
+<button onclick="iconRotate()">시계 방향으로 10도 돌리기</button>
+<button onclick="iconRotate2()">반시계 방향으로 30도 돌리기</button>
+<div>
+    <img id="icon" src="./icon.png" alt="icon">
+</div>
+</body>
+</html>

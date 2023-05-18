@@ -1,0 +1,42 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>exercise 2</title>
+    <style>
+        table {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #444444;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid #444444;
+        }
+    </style>
+    <script>
+      function buildTable() {
+        let tableTBody = document.getElementById("tbody");
+        let size = document.getElementById("inputText").value;
+
+        let tableTd = "";
+        for (let j = 1; j <= size; j++) {
+          tableTd += "<td>" + j + "</td>";
+        }
+
+        for (let i = 1; i <= size; i++) {
+          tableTBody.innerHTML += "<tr>" + tableTd + "</tr>";
+        }
+      }
+    </script>
+</head>
+<body>
+<input type="text" id="inputText">
+<button onclick="buildTable()">버튼</button>
+<table border="1">
+    <tbody id="tbody">
+    </tbody>
+</table>
+</body>
+</html>
