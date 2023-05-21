@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>homework</title>
+    <style>
+        table tr td {
+            border: 1px solid #444444;
+        }
+    </style>
+    <script>
+      let name = ["홍길동", "허준", "임꺽정"];
+
+      function buildTable() {
+        let table_body = document.getElementById("table_body");
+        for (let i = 0; i < name.length; i++) {
+          table_body.innerHTML +=
+            "<tr><td>" + name[i] + "</td>" + "<td>" + "<img src=\"Fig" + (i + 1) + ".jpg\" " + "alt='Fig" + (i + 1) + ".jpg'></td></tr>";
+        }
+      }
+    </script>
+</head>
+<body onload="buildTable()">
+<table>
+    <tbody id="table_body"></tbody>
+</table>
+</body>
+</html>
