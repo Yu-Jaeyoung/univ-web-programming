@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery 그림 보였다 안보였다 하기<</title>
+</head>
+<body>
+<img id="fig1button" src="fig1button.png" alt="숨김버튼"/>
+<img id="fig2" src="fig2.png" alt="숨져지는 그림"/>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script>
+  $("#fig1button").click(function () {
+    $("#fig2").toggle();
+  });
+</script>
+</body>
+</html>
