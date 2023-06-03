@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>라면 끓이는 순서</title>
+</head>
+<body>
+<h3>라면 끓이는 순서</h3>
+<hr>
+<ol onclick="add(this)" type="A" style="background-color: yellowgreen">
+    <li>물을 끓인다.</li>
+</ol>
+</body>
+<script>
+  function add(parent) {
+    let answer = prompt("라면 끓이는 순서를 입력", "");
+    let newLi = document.createElement("li");
+    newLi.innerHTML = answer;
+    parent.appendChild(newLi);
+  }
+</script>
+</html>
