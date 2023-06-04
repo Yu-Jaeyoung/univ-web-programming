@@ -1,0 +1,79 @@
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>계산기 만들기</title>
+    <style>
+        input#result {
+            width: 400px;
+            padding-left: 10px;
+        }
+
+        input {
+            width: 100px;
+        }
+    </style>
+    <script>
+      let exp = "";
+
+      function clickEvent(obj) {
+        let result = document.getElementById("result");
+        exp += obj.value;
+        result.value = exp;
+      }
+
+      function clearAll() {
+        let result = document.getElementById("result");
+        result.value = "0";
+        exp = "";
+      }
+
+      function deleteBack() {
+        let result = document.getElementById("result");
+        exp = exp.slice(0, -1);
+        result.value = exp;
+      }
+
+      function result() {
+        let result = document.getElementById("result");
+        exp = eval(exp);
+        result.value = exp;
+      }
+    </script>
+</head>
+<body>
+<h3>계산기 만들기</h3>
+<hr>
+<input type="text" value="0" id="result">
+<p>
+    <input type="button" value="BACK" onclick="deleteBack()">
+    <input type="button" value="CE" onclick="clearAll()">
+    <input type="button" value="C" onclick="clearAll()">
+    <input type="button" value="=" onclick="result()">
+</p>
+<p>
+    <input type="button" value="7" onclick="clickEvent(this)">
+    <input type="button" value="8" onclick="clickEvent(this)">
+    <input type="button" value="9" onclick="clickEvent(this)">
+    <input type="button" value="/" onclick="clickEvent(this)">
+</p>
+<p>
+    <input type="button" value="4" onclick="clickEvent(this)">
+    <input type="button" value="5" onclick="clickEvent(this)">
+    <input type="button" value="6" onclick="clickEvent(this)">
+    <input type="button" value="*" onclick="clickEvent(this)">
+</p>
+<p>
+    <input type="button" value="1" onclick="clickEvent(this)">
+    <input type="button" value="2" onclick="clickEvent(this)">
+    <input type="button" value="3" onclick="clickEvent(this)">
+    <input type="button" value="-" onclick="clickEvent(this)">
+</p>
+<p>
+    <input type="button" value="0" onclick="clickEvent(this)">
+    <input type="button" value="+" onclick="clickEvent(this)">
+    <input type="button" value="NONE">
+    <input type="button" value="NONE">
+</p>
+</body>
+</html>
