@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>rotate with button</title>
+    <style>
+        #myImage {
+            transition: transform 0s;
+        }
+
+    </style>
+</head>
+<body>
+<img id="myImage" src="./media/spongebob.png" alt="Image">
+<br>
+<br>
+<br>
+<button onclick="rotateImage()">Rotate</button>
+<button onclick="backRotateImage()">BackRotate</button>
+
+<script>
+  let rotationAngle = 0;
+  let image = document.getElementById("myImage");
+
+  function rotateImage() {
+    rotationAngle += 10;
+    image.style.transform = "rotate(" + rotationAngle + "deg)";
+  }
+
+  function backRotateImage(){
+    rotationAngle -= 10;
+    image.style.transform = "rotate(" + rotationAngle + "deg)";
+  }
+</script>
+</body>
+</html>

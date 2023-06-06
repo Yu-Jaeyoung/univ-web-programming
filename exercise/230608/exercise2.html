@@ -1,0 +1,56 @@
+<!--이미지 회전 중심을 다르게 주는 연습-->
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>transform-origin change</title>
+    <style>
+        img {
+            padding: 50px 50px;
+        }
+
+        #img1 {
+            transform: rotate(30deg);
+        }
+
+        #img2 {
+            transform: rotate(30deg);
+            transform-origin: top right;
+        }
+
+        #img3 {
+            transform: rotate(30deg);
+            transform-origin: left top;
+        }
+
+        #img4 {
+            transform: rotate(30deg);
+            transform-origin: right bottom;
+        }
+
+        #img5 {
+            transform: rotate(30deg);
+            transform-origin: left bottom;
+        }
+    </style>
+
+</head>
+<body>
+<div>
+    <img src="media/spongebob.png" alt=".">
+    <img src="media/spongebob.png" alt="." id="img1">
+</div>
+<br>
+<br>
+<div>
+    <img src="media/spongebob.png" alt="." id="img2">
+    <img src="media/spongebob.png" alt="." id="img3">
+</div>
+<br>
+<br>
+<div>
+    <img src="media/spongebob.png" alt="." id="img4">
+    <img src="media/spongebob.png" alt="." id="img5">
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!--유니클로 광고 uniqlock 연습-->
+<!Doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HBNU_Clock</title>
+    <script>
+      /**
+       *    들어갈 내용
+       *    1. 기본 화면은 현재 시간 출력
+       *    2. 시작 시간 이후 10초 기준으로 화면 전환 반복
+       *    2-1. 화면 전환 과정은 사진 -> 시간 -> 사진 -> 반복 ...
+       *
+       */
+      function currentTime() {
+        document.getElementById("span").innerHTML = new Date().toLocaleTimeString();
+      }
+
+      function currentImage() {
+        document.getElementById("span").innerHTML = "<img src='media/HBNU_logo.png' alt='.'>";
+      }
+
+      function updateContent() {
+        let timeCount = 0;
+
+        let intervalId = setInterval(function () {
+          if (timeCount < 10) {
+            currentTime();
+          } else {
+            clearInterval(intervalId);
+            currentImage();
+            setTimeout(updateContent, 10000);
+          }
+          timeCount++;
+        }, 1000);
+      }
+    </script>
+</head>
+<body onload="updateContent()">
+<span id="span">
+        <!--여기에 시간과 사진이 출력되게 할 예정-->
+</span>
+</body>
+</html>
